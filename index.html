@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interval Example</title>
-</head>
-<body>
-  <h1>Interval Example</h1>
-  <p>This text will be updated every 3 seconds.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interval Example</title>
+  </head>
+  <body>
+    <h1>Interval Example</h1>
+    <p>This text will be updated every 3 seconds.</p>
 
-  <script>
-    // Function to update the text
-    function updateText() {
-      document.querySelector('p').innerText = 'Updated text at ' + new Date().toLocaleTimeString();
-    }
+    <script>
+      // Function to update the text
 
-    // Call the function initially
-    updateText();
+      var increment = 0;
 
-    // Set interval to call the function every 3 seconds
-    setInterval(updateText, 3000);
-  </script>
-</body>
+      function updateText() {
+        document.querySelector("p").innerText =
+          "Updated text at " + (increment += 1);
+      }
+
+      // Call the function initially
+      updateText();
+
+      // Set interval to call the function every 3 seconds
+      setInterval(updateText, 3000);
+    </script>
+  </body>
 </html>
