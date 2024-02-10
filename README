@@ -1,0 +1,1 @@
+browserify binance.js -o bundle.js
